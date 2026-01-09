@@ -1,0 +1,49 @@
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | PixelFrame Photography</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+
+<header>
+    <h1>PixelFrame Photography</h1>
+    <p>Contact Us</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+</nav>
+
+<section>
+    <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+
+        <!-- FORM TITLE (NOW ALIGNED) -->
+        <h2>Send Us a Message</h2>
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
+
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 PixelFrame Photography</p>
+</footer>
+
+</body>
+</html>
+

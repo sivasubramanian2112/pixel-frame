@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>django project</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- Bootstrap CSS (FIXED: CDN, not static) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+    <img src="{% static 'img/Logo.png' %}" alt="PixelFrame Logo" class="site-logo">
+    <span class="site-title">PixelFrame</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </nav>
+</header>
+
+<!-- CAROUSEL -->
+<section id="home">
+<div id="carouselExampleAutoplaying"
+     class="carousel slide hero-carousel"
+     data-bs-ride="carousel"
+     data-bs-interval="3000">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/hero1.jpg' %}" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/hero222.jpg' %}" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/hero3.jpg' %}" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button"
+    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</section>
+
+<section class="intro container">
+  <p>
+    At PixelFrame, every frame tells a story — from intimate moments to
+    grand celebrations, we capture memories that last forever.
+  </p>
+</section>
+
+<section id="about" class="about container">
+  <h2>About Us</h2>
+  <p>
+    PixelFrame is a photography-based creative studio located in Madurai, Tamil Nadu,capturing real moments<br>
+    since 2015. With a passion for storytelling,PixelFrame focuses on natural, emotion-filled photography<br>
+    that turns special moments into lasting memories. From weddings to portraits and events, every frame<br>
+    is captured with creativity, care, and attention to detail
+  </p>
+
+  <ul class="strength">
+    <li>Story-Driven Photography</li>
+    <li>Creative & Modern Visual Style</li>
+    <li>Personalized Shoot Experience</li>
+  </ul>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h2>10+</h2>
+    <p>proven excellence since 2015</p>
+  </div>
+
+  <div class="stat">
+    <h2>6K</h2>
+    <p>stories told</p>
+  </div>
+
+  <div class="stat">
+    <h2>100+</h2>
+    <p>creative minds</p>
+  </div>
+
+  <div class="stat">
+    <h2>1</h2>
+    <p>dream</p>
+  </div>
+</section>
+
+<section class="team container">
+  <div class="member">
+    <img src="{% static 'img/photographer1.jpg' %}">
+    <h4>Suresh Kumar</h4>
+    <p>Portrait · 3+ yrs · Candid</p>
+  </div>
+  <div class="member">
+    <img src="{% static 'img/photographer2.jpg' %}">
+    <h4>Praveen Raj</h4>
+    <p>Wedding · 5+ yrs · Storytelling</p>
+  </div>
+  <div class="member">
+    <img src="{% static 'img/photographer3.jpg' %}">
+    <h4>Santhosh</h4>
+    <p>Nature · 3+ yrs · Vibrant</p>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <h2 class="reviews-title">Reviews</h2>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <img src="{% static 'img/review1.jpeg' %}">
+    </div>
+
+    <div class="review-card center">
+      <img src="{% static 'img/review2.jpeg' %}">
+    </div>
+
+    <div class="review-card">
+      <img src="{% static 'img/review3.jpeg' %}">
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <div class="portfolio-grid">
+
+    <a href="#" class="portfolio-item">
+      <img src="{% static 'img/wedding.jpg' %}">
+      <span>Wedding</span>
+    </a>
+
+    <a href="#" class="portfolio-item">
+      <img src="{% static 'img/couple.jpg' %}">
+      <span>Couple Shoots</span>
+    </a>
+
+    <a href="#" class="portfolio-item">
+      <img src="{% static 'img/events.jpg' %}">
+      <span>Events</span>
+    </a>
+
+    <a href="#" class="portfolio-item">
+      <img src="{% static 'img/product.jpg' %}">
+      <span>Product</span>
+    </a>
+
+  </div>
+</section>
+
+<section id="services" class="services">
+  <h2>What PixelFrame does ?</h2>
+
+  <div class="service-item left">
+    <img src="{% static 'img/services1.jpg' %}">
+    <div class="service-text">
+      <h4>Wedding Photography</h4>
+      <p>
+        We capture real emotions, rituals and candid moments
+        to tell your wedding story beautifully.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-item right">
+    <div class="service-text">
+      <h4>Event Photography</h4>
+      <p>
+        From corporate events to celebrations, we document
+        every key moment with clarity and style.
+      </p>
+    </div>
+    <img src="{% static 'img/services2.jpg' %}">
+  </div>
+
+  <div class="service-item left">
+    <img src="{% static 'img/services3.jpg' %}">
+    <div class="service-text">
+      <h4>Product & Commercial Shoot</h4>
+      <p>
+        High quality visuals that highlight details, textures,
+        and brand identity for your business.
+      </p>
+    </div>
+  </div>
+
+  <div class="service-item right">
+    <div class="service-text">
+      <h4>Drone Shots</h4>
+      <p>
+        Stunning aerial perspectives that add a cinematic and
+        premium feel to your visuals.
+      </p>
+    </div>
+    <img src="{% static 'img/services4.jpg' %}">
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <div class="brand">
+        <img src="{% static 'img/Logo.png' %}">
+        <span>PixelFrame</span>
+      </div>
+      <p class="tagline">Framing Moments. Creating Memories.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <p>
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#portfolio">Portfolio</a> |
+        <a href="#services">Services</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>email: goesbysiva.wd@gmail.com</p>
+      <p>Phone: +91 8682832183</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Social</h4>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        </a>
+        <a href="https://wa.me/918682832183" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        </a>
+        <a href="https://pinterest.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    ©2025 PixelFrame. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Bootstrap JS (FIXED) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
