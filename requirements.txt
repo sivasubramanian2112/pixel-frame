@@ -1,4 +1,4 @@
-Django
-WhiteNoise
-Gunicorn
+Django>=4.2
+gunicorn
+whitenoise
 
